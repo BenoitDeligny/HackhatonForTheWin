@@ -1,15 +1,16 @@
-
+<!-- WELCOME -->
 <section id="headerPict" [ngStyle]="{'background-image': 'url(' + test2.destinationPicture1 + ')', 'background-attachment': 'fixed', 'z-index': '-1'}">
   <div class="container">
   </div>
 </section>
 
-<section class="normal-scroll" id="welcome">
+<section class="normal-scroll {{test2.theme}}" id="welcome">
   <div class="container {{test2.theme}}">
     <h1 class="h1Welcome">Bienvenue à {{test2.destination}}</h1>
   </div>
 </section>
 
+<!-- INTRO -->
 <section class="normal-scroll">
   <div class="container">
     <div>
@@ -39,6 +40,7 @@
   </div>
 </section>
 
+<!-- RECEIPE 1 -->
 <section id="foodPict" [ngStyle]="{'background-image': 'url(' + test2.receipe1[1].picture + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
   <div class="container">
   </div>
@@ -72,6 +74,7 @@
   </div>
 </section>
 
+<!-- RECEIPE 2 -->
 <section id="foodPict2" [ngStyle]="{'background-image': 'url(' + test2.receipe2[1].picture + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
   <div class="container">
   </div>
@@ -105,6 +108,7 @@
   </div>
 </section>
 
+<!-- CHILL -->
 <section id="chillPict" [ngStyle]="{'background-image': 'url(' + test2.chillPlacePicture + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
   <div class="container">
   </div>
@@ -119,10 +123,11 @@
   </div>
 </section>
 
-<section class="normal-scroll">
-  <div class="container">
-    <h1>
-      Rendez-vous demain, pour votre prochain voyage avec Sofa'r
+<!-- FOOTER -->
+<section class="normal-scroll {{test2.theme}}" id="goodbye">
+  <div class="container {{test2.theme}}">
+    <h1 class="{{test2.theme}}">
+      Voyagez de votre canapé avec Sofa'r
     </h1>
   </div>
 </section>
