@@ -46,6 +46,8 @@ export class PimpMyCouchComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  // A REMPLACER PAR DU DRAG&DROP
   getBody(src: string) {
     this.body = src;
   }
@@ -60,5 +62,31 @@ export class PimpMyCouchComponent implements OnInit {
 
   getFin(src: string) {
     this.fin = src;
+  }
+  // END
+
+  setbodyIsDisplay() {
+    this.engineIsDisplay = !this.engineIsDisplay;
+    this.bodyIsDisplay = !this.bodyIsDisplay;
+    this.wheelIsDisplay = !this.wheelIsDisplay;
+    this.finIsDisplay = !this.finIsDisplay;
+  }
+  setengineIsDisplay() {
+    this.engineIsDisplay = !this.engineIsDisplay;
+    this.bodyIsDisplay = !this.bodyIsDisplay;
+    this.wheelIsDisplay = !this.wheelIsDisplay;
+    this.finIsDisplay = !this.finIsDisplay;
+  }
+  setwheelIsDisplay() {
+    this.wheelIsDisplay = !this.wheelIsDisplay;
+    this.bodyIsDisplay = !this.bodyIsDisplay;
+    this.finIsDisplay = !this.finIsDisplay;
+    this.engineIsDisplay = !this.engineIsDisplay;
+  }
+  setfinIsDisplay() {
+    this.finIsDisplay = !this.finIsDisplay;
+    this.bodyIsDisplay = !this.bodyIsDisplay;
+    this.wheelIsDisplay = !this.wheelIsDisplay;
+    this.engineIsDisplay = !this.engineIsDisplay;
   }
 }
