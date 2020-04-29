@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "hackForTheWin": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hackForTheWin"
+    }
+  },
+  "defaultProject": "hackForTheWin",
+  "cli": {
+    "analytics": "0c542638-8935-4e18-9341-51dc3cc884c3"
+  }
 }
