@@ -1,1 +1,29 @@
-test
+<div class="overallContainer">
+    <div class="stuffContainer">
+        <div class="body" *ngFor="let body of couchBodies">
+            <img src="{{body}}">
+        </div>
+    </div>
+
+    <div class="stuffContainer">
+        <div class="engine" *ngFor="let engine of engines">
+            <img src="{{engine}}">
+        </div>
+    </div>
+
+    <div class="stuffContainer">
+        <div class="wheel" *ngFor="let wheel of wheels">
+            <img src="{{wheel}}">
+        </div>
+    </div>
+
+    <div class="stuffContainer">
+        <div class="fin" *ngFor="let fin of fins">
+            <img src="{{fin}}">
+        </div>
+    </div>
+</div>
+
+<div class="pimpContainer">
+
+</div>

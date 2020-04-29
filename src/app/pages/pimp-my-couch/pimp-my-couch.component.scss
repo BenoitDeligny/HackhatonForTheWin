@@ -1,0 +1,29 @@
+.overallContainer {
+    display: flex;
+}
+
+.stuffContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.body img {
+    height: 200px;
+    width: 400px;
+}
+
+.engine img {
+    height: 150px;
+    width: 150px;
+}
+
+.wheel img {
+    height: 70px;
+    width: 70px;
+}
+
+
+.fin img {
+    height: 100px;
+    width: 400px;
+}
