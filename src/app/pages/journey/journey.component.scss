@@ -1,0 +1,126 @@
+.h1Welcome{
+  color: white;
+}
+
+h1{
+  text-align: center;
+  font-size: xx-large;
+  padding: 2vh;
+}
+
+h2{
+  text-align: center;
+}
+
+p{
+  margin: 5px 0;
+}
+
+//CARDS
+.card{
+  width: 40%;
+  border-radius: 10px;
+  margin: 20px 0px;
+}
+
+.card img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.cardContainer{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0px;
+}
+
+.stepLign{
+  display: flex;
+}
+
+.stepNum{
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 3px 5px;
+  text-align: center;
+  color: white;
+}
+
+.step{
+  margin-left: 10px;
+}
+
+//SECTION
+section {
+  position: relative;
+  min-height: 60vh;
+  width: 100%;
+  transform-style: inherit;
+  padding: 20px 10px;
+}
+
+#welcome{
+  padding: 0;
+  height: 10%;
+}
+
+#headerPict, #footerPict{
+  height: 90%;
+}
+
+section, section:before {
+  background: 50% 50% / cover;
+}
+
+section:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.normal-scroll {
+  background: #fff;
+  transform: translateZ(0);
+  min-height: 0;
+  background-color: rgb(231, 231, 231);
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  background-color: rgb(231, 231, 231);
+}
+
+#welome
+// DEPENDING ON THEME
+.winter{
+  background-color: #FF9900;
+  color: white;
+}
+
+.summer{
+  background-color: #3299BB;
+  color: white;
+}
+
+.urban{
+  background-color: rgb(119, 118, 118);
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  color: black;
+  font-size: large;
+}

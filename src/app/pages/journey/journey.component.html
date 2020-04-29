@@ -1,1 +1,133 @@
-<p>journey works!</p>
+
+<section id="headerPict" [ngStyle]="{'background-image': 'url(' + test2.destinationPicture1 + ')', 'background-attachment': 'fixed', 'z-index': '-1'}">
+  <div class="container">
+  </div>
+</section>
+
+<section class="normal-scroll" id="welcome">
+  <div class="container {{test2.theme}}">
+    <h1 class="h1Welcome">Bienvenue à {{test2.destination}}</h1>
+  </div>
+</section>
+
+<section class="normal-scroll">
+  <div class="container">
+    <div>
+      <p>{{test2.destinationDescription}}</p>
+      <br>
+      <h2>Point d'intérêt</h2>
+      <p>{{test2.destinationAnecdote}}</p>
+    </div>
+    <div class="cardContainer">
+      <div class="card">
+        <h3>Ballade 1</h3>
+        <p>{{test2.ride1}}</p>
+      </div>
+      <div class="card">
+        <img src="{{test2.ride1Picture}}" alt="">
+      </div>
+    </div>
+    <div class="cardContainer">
+      <div class="card">
+        <img src="{{test2.ride2Picture}}" alt="">
+      </div>
+      <div class="card">
+        <h3>Ballade 2</h3>
+        <p>{{test2.ride2}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="foodPict" [ngStyle]="{'background-image': 'url(' + test2.receipe1[1].picture + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
+  <div class="container">
+  </div>
+</section>
+
+<section class="normal-scroll">
+  <div class="container">
+    <h1>Spécialité locale : {{test2.receipe1[0].name}}</h1>
+    <h2>Temps de préparation: {{test2.receipe1[2].preparationTime}}</h2>
+    <div class="cardContainer">
+      <div class="card">
+        <h3>Ingrédients</h3>
+        <div *ngFor="let ingredient of test2.receipe1[3].receipe1Ingredients">
+          <p>{{ingredient.ingredient}}</p>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Instructions</h3>
+        <div *ngFor="let step of test2.receipe1[4].receipe1Steps">
+          <div class="stepLign">
+            <div class="stepNum {{test2.theme}}">
+              {{step.step}}
+            </div>
+            <div class="step">
+              {{step.instruction}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="foodPict2" [ngStyle]="{'background-image': 'url(' + test2.receipe2[1].picture + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
+  <div class="container">
+  </div>
+</section>
+
+<section class="normal-scroll">
+  <div class="container">
+    <h1>Spécialité locale : {{test2.receipe2[0].name}}</h1>
+    <h2>Temps de préparation: {{test2.receipe2[2].preparationTime}}</h2>
+    <div class="cardContainer">
+      <div class="card">
+        <h3>Ingrédients</h3>
+        <div *ngFor="let ingredient of test2.receipe2[3].receipe2Ingredients">
+          <p>{{ingredient.ingredient}}</p>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Instructions</h3>
+        <div *ngFor="let step of test2.receipe2[4].receipe2Steps">
+          <div class="stepLign">
+            <div class="stepNum {{test2.theme}}">
+              {{step.step}}
+            </div>
+            <div class="step">
+              {{step.instruction}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="chillPict" [ngStyle]="{'background-image': 'url(' + test2.chillPlacePicture + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
+  <div class="container">
+  </div>
+</section>
+
+<section class="normal-scroll">
+  <div class="container">
+    <h1>Notre coup de coeur</h1>
+    <p>
+      {{test2.chillPlace}}
+    </p>
+  </div>
+</section>
+
+<section class="normal-scroll">
+  <div class="container">
+    <h1>
+      Rendez-vous demain, pour votre prochain voyage avec Sofa'r
+    </h1>
+  </div>
+</section>
+
+<section id="footerPict" [ngStyle]="{'background-image': 'url(' + test2.destinationPicture1 + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
+  <div class="container {{test2.theme}}">
+  </div>
+</section>
