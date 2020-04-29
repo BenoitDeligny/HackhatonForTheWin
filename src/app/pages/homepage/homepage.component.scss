@@ -1,0 +1,62 @@
+.background {
+  position: relative;
+  margin: auto;
+  background-image: url('../../../assets/back.jpg');
+  background-repeat: no-repeat;
+  background-position: absolute;
+  background-position-y: -200px;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+h1 {
+  margin: auto;
+  font-family: 'Alegreya', serif;
+  font-size: 180px;
+  letter-spacing: 20px;
+  color: rgba(255,255,255,1);
+}
+
+.btn {
+  font-family: 'Alegreya', serif;
+  font-size: 3rem;
+  color: rgba(0,0,0,0.5);;
+  background-color: rgba(255,255,255,0.4);
+  outline:0;
+  transition: background-color 0.4s ease;
+  font-family: 'Ubuntu', sans-serif;
+  border-radius: 20px;
+  padding: 1rem;
+  position: absolute;
+  top: 80%;
+  left: 40%;
+}
+.btn:hover {
+  transition: all 400ms;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.wContainer {
+  display:flex;
+  width: 75%;
+  height: 40%;
+  margin: auto;
+  justify-content: space-between;
+}
+.why, .how, .what {
+  height: 100%;
+  margin: 5px 15px;
+  padding: 10px;
+  border-radius: 5px;
+  color: rgba(0,0,0,0.5);
+  background-color: rgba(255,255,255,0.5);
+}
+.why:hover,
+.how:hover,
+.what:hover {
+  color: rgba(0,0,0,1);
+  background-color: rgba(255,255,255,0.8);
+}
