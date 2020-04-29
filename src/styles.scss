@@ -5,5 +5,14 @@
 }
 
 body{
-  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  perspective: 1px;
+  transform-style: preserve-3d;
+}
+html{
+  height: 100%;
+  overflow: hidden;
 }

@@ -8,11 +8,12 @@ import { Destination } from 'src/app/shared/destination';
   styleUrls: ['./journey.component.scss']
 })
 export class JourneyComponent implements OnInit {
+  constructor(private destinationService: DestinationsService) { }
 
   berlin: Destination;
   srilanka: Destination;
   laponie: Destination;
-  constructor(private destinationService: DestinationsService) { }
+
 
   ngOnInit(): void {
     this.destinationService.getBerlin().subscribe(
@@ -22,4 +23,7 @@ export class JourneyComponent implements OnInit {
     this.destinationService. getLaponie().subscribe(
       (data) => {this.laponie = data; });
       }
-  }
+}
+
+
+
