@@ -1,15 +1,15 @@
 {
-  "theme": "Eté et soleil",
+  "theme": "summer",
   "destination" : "Sri-Lanka",
   "destinationDescription":"Le Sri-Lanka est une destination évocatrice ; île lointaine autrefois appelée Ceylan, elle faisait partie de la route de Epices. De part sa position géographique, c'est une terre riche qui propose un camaïeu de verts des rizières et des jardins d'épices, de plages magnifiques bordées de coctiers ou encore des montagnes magnifiques et colossales qui dominent le paysages d'une tranquille assurance.",
   "destinationAnecdote":"Encore active au XIXe s, la terrible secte des Thugs se composait d’adorateurs de la déesse noire de la Destruction, Kali, à laquelle des temples sont encore dédiés notamment à Trincomalee. Les Thugs étranglaient rituellement leurs victimes avant de les dépouiller.Ces fanatiques, qui furent la terreur des colonisateurs britanniques, ont inspiré Spielberg dans « Indiana Jones et le Temple maudit ». Les extérieurs du film furent d’ailleurs tournés sur l’île, à Sigiriya.",
   "destinationPicture1":"https://www.trekmag.com/media/news/2020/01/teasing-trek-4__fit_687x458.jpg",
   "destinationPicture2":"https://www.trekmag.com/media/news/2020/01/teasing-trek-3__fit_687x458.jpg",
-  "destinationPicture3":"https://www.guide-evasion.fr/wp-content/uploads/2018/06/Guideevasion-plage-Sri-Lanka-749x496.png",
+  "destinationPicture3":"https://www.gayvoyageur.com/wp-content/uploads/2017/12/les-plus-belles-plages-tangalle.jpg",
   "ride1":"Le pic d’Adam, pèlerinage pour tous au Sri Lanka : la plus légendaire randonnée du Sri Lanka. Parcours atypique puisqu’il est constitué de plus de 5000 marches. Cette balade éprouvante n’est pas une promenade de santé, vos genoux seront mis à rude épreuve. Le pic d’Adam est avant tout un lieu de pèlerinage aussi bien pour les hindous, les bouddhistes et les musulmans. C’est donc un mélange de voyageurs et de familles que vous croiserez dès 2 à 3h du matin sur le sentier.",
   "ride2":"Lipton’s Seat, au cœur de l’histoire du thé au Sri Lanka :Le Lipton’s Seat est un panorama anciennement prisé par Sir Lipton en personne, qui aimait admirer le paysage qui a fait sa richesse. Situé à environ 45 min d’Haputale, vous pourrez y accéder en tuk tuk ou autre véhicule. Ici, se dévoilent à 360° des plantations de thé à flanc de montagne. De là, une balade au cœur des plantations vous attend pour une descente de 8 km jusqu’à l’usine de thé de Dambatene.  ",
   "chillPlace":"Rien de tel que les plages pratiquées par les surfeurs du monde entier ; observer avec délectation ces derniers faire montre de leurs talents, assis sur le sable avec un cocktail à la main et un coucher de soleil progressif",
-  "chillPlacePicture":"http://www.turquoise-voyages.fr/destinations/sri-lanka/uploads/parag/med/srilanka_surf1.jpg",
+  "chillPlacePicture":"https://ecole-surf-srilanka.com/wp-content/uploads/2019/08/surf-coaching-sri-lanka-sunrise.jpg",
   "ride1Picture":"https://www.caingram.info/Sri_lanka/Hill_country/adams-peak.jpg",
   "ride2Picture":"https://i2.wp.com/www.a-ticket-to-ride.com/wp-content/uploads/2018/04/haputale-plantations-lipton-seat.jpg?fit=1633%2C705",
   "receipe1": [
@@ -43,7 +43,7 @@
   ],
   "receipe2": [
     {"name":"Parippu curry"},
-    {"picture":"https://www.196flavors.com/wp-content/uploads/2018/02/parippu-curry-1.jpg"},
+    {"picture":"https://www.saffrontrail.com/wp-content/uploads/2016/09/kerala-parippu-curry-yellow-moong-dal-with-coconut.1024x1024.jpg"},
     {"preparationTime":"45min"},
     {"receipe2Ingredients":
       [
