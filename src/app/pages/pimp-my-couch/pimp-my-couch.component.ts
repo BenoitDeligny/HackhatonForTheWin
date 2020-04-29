@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-pimp-my-couch',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PimpMyCouchComponent implements OnInit {
 
+  constructor() { }
+
   // DISPLAY
   bodyIsDisplay = false;
-  engineIsDisplay = true;
+  engineIsDisplay = false;
   wheelIsDisplay = false;
   finIsDisplay = false;
 
@@ -35,58 +38,59 @@ export class PimpMyCouchComponent implements OnInit {
     'assets/images/aileron3.png'
   ];
 
+  // CANAPE PIMPE
+  finalCouch = [];
+
   // CONSTRUCTION DU CANAPE
   body = '';
   engine = '';
   wheel = '';
   fin = '';
 
-  constructor() { }
+  // DRAG AND DROP
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.couchBodies, event.previousIndex, event.currentIndex);
+    moveItemInArray(this.engines, event.previousIndex, event.currentIndex);
+    moveItemInArray(this.wheels, event.previousIndex, event.currentIndex);
+    moveItemInArray(this.fins, event.previousIndex, event.currentIndex);
+  }
+
+  onDrop(event: CdkDragDrop<string[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex);
+    }
+  }
 
   ngOnInit(): void {
   }
 
-
-  // A REMPLACER PAR DU DRAG&DROP
-  getBody(src: string) {
-    this.body = src;
-  }
-
-  getEngine(src: string) {
-    this.engine = src;
-  }
-
-  getWheel(src: string) {
-    this.wheel = src;
-  }
-
-  getFin(src: string) {
-    this.fin = src;
-  }
-  // END
-
   setbodyIsDisplay() {
-    this.engineIsDisplay = !this.engineIsDisplay;
-    this.bodyIsDisplay = !this.bodyIsDisplay;
-    this.wheelIsDisplay = !this.wheelIsDisplay;
-    this.finIsDisplay = !this.finIsDisplay;
+    this.bodyIsDisplay = true;
+    this.engineIsDisplay = false;
+    this.finIsDisplay = false;
+    this.wheelIsDisplay = false;
   }
   setengineIsDisplay() {
-    this.engineIsDisplay = !this.engineIsDisplay;
-    this.bodyIsDisplay = !this.bodyIsDisplay;
-    this.wheelIsDisplay = !this.wheelIsDisplay;
-    this.finIsDisplay = !this.finIsDisplay;
+    this.bodyIsDisplay = false;
+    this.engineIsDisplay = true;
+    this.finIsDisplay = false;
+    this.wheelIsDisplay = false;
   }
   setwheelIsDisplay() {
-    this.wheelIsDisplay = !this.wheelIsDisplay;
-    this.bodyIsDisplay = !this.bodyIsDisplay;
-    this.finIsDisplay = !this.finIsDisplay;
-    this.engineIsDisplay = !this.engineIsDisplay;
+    this.bodyIsDisplay = false;
+    this.engineIsDisplay = false;
+    this.wheelIsDisplay = true;
+    this.finIsDisplay = false;
   }
   setfinIsDisplay() {
-    this.finIsDisplay = !this.finIsDisplay;
-    this.bodyIsDisplay = !this.bodyIsDisplay;
-    this.wheelIsDisplay = !this.wheelIsDisplay;
-    this.engineIsDisplay = !this.engineIsDisplay;
+    this.bodyIsDisplay = false;
+    this.engineIsDisplay = false;
+    this.wheelIsDisplay = false;
+    this.finIsDisplay = true;
   }
 }

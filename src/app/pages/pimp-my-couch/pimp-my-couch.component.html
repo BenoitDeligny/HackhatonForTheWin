@@ -1,46 +1,52 @@
 <div class="overallContainer">
 
-    <div class="couchContainer" >
-        <div class="leftContainer">
-            <select name="BodyParts">
-                <option value="setbodyIsDisplay()">Bodies</option>
-                <option value="setengineIsDisplay()">Engine</option>
-                <option value="setwheelIsDisplay()">Wheels</option>
-                <option value="setfinIsDisplay()">Fins</option>
-            </select>
-            <div class="stuffContainer" *ngIf="bodyIsDisplay">
-                <div class="body" *ngFor="let body of couchBodies">
-                    <img src="{{body}}" (click)=getBody(body)>
-                </div>
-            </div>
-    
-            <div class="stuffContainer" *ngIf="engineIsDisplay">
-                <div class="engine" *ngFor="let engine of engines">
-                    <img src="{{engine}}" (click)=getEngine(engine)>
-                </div>
-            </div>
-    
-            <div class="stuffContainer" *ngIf="wheelIsDisplay">
-                <div class="wheel" *ngFor="let wheel of wheels">
-                    <img src="{{wheel}}" (click)=getWheel(wheel)>
-                </div>
-            </div>
-    
-            <div class="stuffContainer" *ngIf="finIsDisplay">
-                <div class="fin" *ngFor="let fin of fins">
-                    <img src="{{fin}}" (click)=getFin(fin)>
-                </div>
-            </div>
+    <div class="couchContainer">
+        <div class="BodyParts" name="BodyParts">
+            <button class="btn" (click)="setbodyIsDisplay()">Bases</button>
+            <button class="btn" (click)="setengineIsDisplay()">Moteurs</button>
+            <button class="btn" (click)="setwheelIsDisplay()">Roues</button>
+            <button class="btn" (click)="setfinIsDisplay()">Ailerons</button>
         </div>
-    
-        <div class="rightContainer">
-            <img class="bodyCombo" src="{{body}}">
-            <img class="engineCombo" src="{{engine}}">
-            <img class="wheelCombo1" src="{{wheel}}">
-            <img class="wheelCombo2" src="{{wheel}}">
-            <img class="wheelCombo3" src="{{wheel}}">
-            <img class="wheelCombo4" src="{{wheel}}">
-            <img class="finCombo" src="{{fin}}">
+        
+        <div class="leftContainer">
+            <div class="stuffContainer" *ngIf="bodyIsDisplay"
+            cdkDropList
+            (cdkDropListDropped)="onDrop($event)"
+            #bodiesList="cdkDropList"
+            [cdkDropListData]="couchBodies"
+            [cdkDropListConnectedTo]="[finalCouchList]">
+                <div class="body" *ngFor="let body of couchBodies" cdkDrag>
+                    <img src="{{body}}">
+                </div>
+            </div>
+
+            <div cdkDropList (cdkDropListDropped)="drop($event)" class="stuffContainer" *ngIf="engineIsDisplay">
+                <div class="engine" *ngFor="let engine of engines" cdkDrag>
+                    <img src="{{engine}}">
+                </div>
+            </div>
+
+            <div cdkDropList (cdkDropListDropped)="drop($event)" class="stuffContainer" *ngIf="wheelIsDisplay">
+                <div class="wheel" *ngFor="let wheel of wheels" cdkDrag>
+                    <img src="{{wheel}}">
+                </div>
+            </div>
+
+            <div cdkDropList (cdkDropListDropped)="drop($event)" class="stuffContainer" *ngIf="finIsDisplay">
+                <div class="fin" *ngFor="let fin of fins" cdkDrag>
+                    <img src="{{fin}}">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="rightContainer"
+        cdkDropList
+        #finalCouchList="cdkDropList"
+        [cdkDropListData]="finalCouch"
+        [cdkDropListConnectedTo]="[couchBodies]"
+        (cdkDropListDropped)="onDrop($event)">
+        <div *ngFor="let truc of finalCouch" cdkDrag></div>
         </div>
     </div>
 
