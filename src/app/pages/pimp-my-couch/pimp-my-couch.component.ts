@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PimpMyCouchComponent implements OnInit {
 
+  // DISPLAY
+  bodyIsDisplay = false;
+  engineIsDisplay = true;
+  wheelIsDisplay = false;
+  finIsDisplay = false;
+
+
+  // OPTIONS DU CANAPE
   couchBodies = [
     'assets/images/tissuCouch.png',
     'assets/images/cuirCouch.png'
@@ -20,19 +28,37 @@ export class PimpMyCouchComponent implements OnInit {
   wheels = [
     'assets/images/fastWheel.png',
     'assets/images/fireWheel.png',
-    'assets/images/properWheel.png'
   ];
 
   fins = [
     'assets/images/aileron.png',
-    'assets/images/aileron2.jpg'
+    'assets/images/aileron3.png'
   ];
 
-
+  // CONSTRUCTION DU CANAPE
+  body = '';
+  engine = '';
+  wheel = '';
+  fin = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  getBody(src: string) {
+    this.body = src;
+  }
+
+  getEngine(src: string) {
+    this.engine = src;
+  }
+
+  getWheel(src: string) {
+    this.wheel = src;
+  }
+
+  getFin(src: string) {
+    this.fin = src;
+  }
 }

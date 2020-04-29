@@ -1,29 +1,41 @@
 <div class="overallContainer">
-    <div class="stuffContainer">
-        <div class="body" *ngFor="let body of couchBodies">
-            <img src="{{body}}">
+
+    <div class="couchContainer" >
+        <div class="leftContainer">
+            <div class="stuffContainer" *ngIf="bodyIsDisplay">
+                <div class="body" *ngFor="let body of couchBodies">
+                    <img src="{{body}}" (click)=getBody(body)>
+                </div>
+            </div>
+    
+            <div class="stuffContainer" *ngIf="engineIsDisplay">
+                <div class="engine" *ngFor="let engine of engines">
+                    <img src="{{engine}}" (click)=getEngine(engine)>
+                </div>
+            </div>
+    
+            <div class="stuffContainer" *ngIf="wheelIsDisplay">
+                <div class="wheel" *ngFor="let wheel of wheels">
+                    <img src="{{wheel}}" (click)=getWheel(wheel)>
+                </div>
+            </div>
+    
+            <div class="stuffContainer" *ngIf="finIsDisplay">
+                <div class="fin" *ngFor="let fin of fins">
+                    <img src="{{fin}}" (click)=getFin(fin)>
+                </div>
+            </div>
+        </div>
+    
+        <div class="rightContainer">
+            <img class="bodyCombo" src="{{body}}">
+            <img class="engineCombo" src="{{engine}}">
+            <img class="wheelCombo1" src="{{wheel}}">
+            <img class="wheelCombo2" src="{{wheel}}">
+            <img class="wheelCombo3" src="{{wheel}}">
+            <img class="wheelCombo4" src="{{wheel}}">
+            <img class="finCombo" src="{{fin}}">
         </div>
     </div>
-
-    <div class="stuffContainer">
-        <div class="engine" *ngFor="let engine of engines">
-            <img src="{{engine}}">
-        </div>
-    </div>
-
-    <div class="stuffContainer">
-        <div class="wheel" *ngFor="let wheel of wheels">
-            <img src="{{wheel}}">
-        </div>
-    </div>
-
-    <div class="stuffContainer">
-        <div class="fin" *ngFor="let fin of fins">
-            <img src="{{fin}}">
-        </div>
-    </div>
-</div>
-
-<div class="pimpContainer">
 
 </div>
