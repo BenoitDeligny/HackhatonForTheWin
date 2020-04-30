@@ -6,22 +6,33 @@
 
 <section class="normal-scroll {{randomResult[0]}}" id="welcome">
   <div class="container {{randomResult[0]}}">
-    <h1 class="h1Welcome" >Bienvenue à {{randomResult[1]}}</h1>
+    <h1 class="h1Welcome">{{randomResult[1]}}</h1>
   </div>
 </section>
 
 <!-- INTRO -->
 <section class="normal-scroll">
   <div class="container">
-    <div>
-      <p>{{randomResult[2]}}</p>
-      <br>
-      <h2>Point d'intérêt</h2>
-      <p>{{randomResult[3]}}</p>
+    <div class="description-interested-point-cardContainer">
+      <div class="description-card">
+        <h2>Un peu d'histoire...</h2>
+        <hr>
+        <p>{{randomResult[2]}}</p>
+      </div>
+      <div class="interested-point-card">
+        <h2>Points d'intérêts</h2>
+        <div class= "hr-interested-point">
+          <hr>
+        </div>
+        <p>{{randomResult[3]}}</p>
+      </div>
     </div>
     <div class="cardContainer">
-      <div class="card">
-        <h3>Ballade 1</h3>
+      <div class="card-balade">
+        <h3 class="balade">Balade 1</h3>
+        <div class="hr-ride">
+          <hr>
+        </div>
         <p>{{randomResult[7]}}</p>
       </div>
       <div class="card">
@@ -32,8 +43,11 @@
       <div class="card">
         <img src="{{randomResult[12]}}" alt="">
       </div>
-      <div class="card">
-        <h3>Ballade 2</h3>
+      <div class="card-balade">
+        <h3 class="balade">Balade 2</h3>
+        <div class="hr-ride">
+          <hr>
+        </div>
         <p>{{randomResult[8]}}</p>
       </div>
     </div>
@@ -41,31 +55,31 @@
 </section>
 
 <!-- RECEIPE 1 -->
-<section id="foodPict" [ngStyle]="{'background-image': 'url(' + randomResult[27] + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
-  <div class="container">
-  </div>
-</section>
-
 <section class="normal-scroll">
   <div class="container">
-    <h1>Spécialité locale : {{srilanka.receipe1[0].name}}</h1>
-    <h2>Temps de préparation: {{srilanka.receipe1[2].preparationTime}}</h2>
+    <div class="speciality-title">
+    </div>
+    </div>
+</section>
+    <section class="normal-scroll">
+      <div class="container">
+        <div class="speciality-title">
+      <h1>Spécialité locale : {{berlin.receipe1[0].name}}</h1>
+    </div>
+    <h4>Temps de préparation: {{berlin.receipe1[2].preparationTime}}</h4>
     <div class="cardContainer">
-      <div class="card">
+      <div class="card-ingredients">
         <h3>Ingrédients</h3>
-        <div *ngFor="let ingredient of srilanka.receipe1[3].receipe1Ingredients">
-          <p>{{ingredient.ingredient}}</p>
+        <div class="hr-ingredients">
+          <hr class="{{randomResult[0]}}">
         </div>
-      </div>
-      <div class="card">
-        <h3>Instructions</h3>
-        <div *ngFor="let step of srilanka.receipe1[4].receipe1Steps">
+        <div *ngFor="let ingredient of berlin.receipe1[3].receipe1Ingredients">
           <div class="stepLign">
-            <div class="stepNum {{randomResult[0]}}">
-              {{step.step}}
+            <div class="stepNum">
+              {{ingredient.step}}
             </div>
             <div class="step">
-              {{step.instruction}}
+              {{ingredient.instruction}}
             </div>
           </div>
         </div>
@@ -82,20 +96,31 @@
 
 <section class="normal-scroll">
   <div class="container">
-    <h1>Spécialité locale : {{srilanka.receipe2[0].name}}</h1>
-    <h2>Temps de préparation: {{srilanka.receipe2[2].preparationTime}}</h2>
+    <div class="speciality-title">
+      <h1>Spécialité locale : {{laponie.receipe2[0].name}}</h1>
+    </div>
+    <h4>Temps de préparation: {{laponie.receipe2[2].preparationTime}}</h4>
     <div class="cardContainer">
-      <div class="card">
+      <div class="card-ingredients">
         <h3>Ingrédients</h3>
-        <div *ngFor="let ingredient of srilanka.receipe2[3].receipe2Ingredients">
-          <p>{{ingredient.ingredient}}</p>
+        <div class="hr-ingredients">
+          <hr>
+        </div>
+        <div *ngFor="let ingredient of laponie.receipe2[3].receipe2Ingredients">
+          <div class="ingredientLign">
+            <img class="ingredients" src="https://www.svgrepo.com/show/171219/bowl.svg" alt="">
+            <p>{{ingredient.ingredient}}</p>
+          </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card-instructions">
         <h3>Instructions</h3>
-        <div *ngFor="let step of srilanka.receipe2[4].receipe2Steps">
+        <div class="hr-instructions">
+          <hr>
+        </div>
+        <div *ngFor="let step of laponie.receipe2[4].receipe2Steps">
           <div class="stepLign">
-            <div class="stepNum {{srilanka.theme}}">
+            <div class="stepNum">
               {{step.step}}
             </div>
             <div class="step">
@@ -117,22 +142,23 @@
 <section class="normal-scroll">
   <div class="container">
     <h1>Notre coup de coeur</h1>
-    <p>
+    <p class="chill">
       {{randomResult[24]}}
     </p>
   </div>
 </section>
 
 <!-- FOOTER -->
-<section class="normal-scroll {{srilanka.theme}}" id="goodbye">
-  <div class="container {{srilanka.theme}}">
-    <h1 class="{{srilanka.theme}}">
+<section class="normal-scroll {{randomResult[0]}}" id="goodbye">
+  <div class="container {{randomResult[0]}}">
+    <h1 class="{{randomResult[0]}}">
       Voyagez de votre canapé avec Sofa'r
     </h1>
   </div>
+  <button [routerLink]="['/pimped']">Retour à la personnalisation</button>
 </section>
 
-<section id="footerPict" [ngStyle]="{'background-image': 'url(' + randomResult[6]+ ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
-  <div class="container {{srilanka.theme}}">
+<section id="footerPict" [ngStyle]="{'background-image': 'url(' + randomResult[6] + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
+  <div class="container {{randomResult[0]}}">
   </div>
 </section>

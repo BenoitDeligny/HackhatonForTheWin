@@ -12,7 +12,7 @@ export class PreferencesComponent implements OnInit {
   berlin: Destination;
   srilanka: Destination;
   laponie: Destination;
-
+  selectedDestination: Destination;
   randomDestination: Destination;
 
   destinations: Destination[] = [];
@@ -23,9 +23,11 @@ export class PreferencesComponent implements OnInit {
 
 
   ngOnInit(): void {
+
     this.destinationService.getBerlin().subscribe(
       (data) => {
         this.berlin = data;
+        this.selectedDestination = data;
         this.destinations.push(data);
       });
 
