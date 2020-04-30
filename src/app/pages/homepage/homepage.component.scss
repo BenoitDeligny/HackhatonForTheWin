@@ -13,7 +13,7 @@ h1 {
 }
 h2 {
   position: absolute;
-  top:27%;
+  top:32%;
   left: 37.5%;
   font-family: 'Alegreya', serif;
   font-size: 30px;
@@ -28,13 +28,13 @@ h2 {
   justify-content: space-around;
 }
 .why, .how, .what {
-  height: 85%;
+  height: 110%;
   margin: -50px 15px 200px;
   padding: 10px;
   border-radius: 5px;
   color: black;
   width: 40%;
-  font-size: 1.05rem;
+  font-size: 1rem;
   text-align: justify;
   background-color: rgb(255, 255, 255);
 }
@@ -56,13 +56,13 @@ hr {
   border: 0.00025rem solid  #BA3A7E;
   width: 50%;
   position: absolute;
-  top:31.5%;
-  left: 37.5%;
+  top: 38%;
+  left: 40%;
 }
 .btn {
   font-family: 'Alegreya', serif;
   font-size: 3rem;
-  color: rgba(0,0,0,0.5);;
+  color: rgba(0,0,0,0.5);
   background-color: rgba(255,255,255,0.4);
   outline:0;
   transition: background-color 0.2s ease;
@@ -70,7 +70,7 @@ hr {
   border-radius: 20px;
   padding: 1rem;
   position: absolute;
-  top: 135%;
+  top: 145%;
   left: 42%;
   border: 2px solid #BA3A7E;
   margin-bottom: 70px;

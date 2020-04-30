@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -92,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -125,8 +127,5 @@
       }
     }
   },
-  "defaultProject": "hackForTheWin",
-  "cli": {
-    "analytics": "0c542638-8935-4e18-9341-51dc3cc884c3"
-  }
+  "defaultProject": "hackForTheWin"
 }
