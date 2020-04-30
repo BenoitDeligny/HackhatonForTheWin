@@ -1,1 +1,48 @@
-<p>pimp-my-couch works!</p>
+<div class="overallContainer">
+    
+    <div class="couchContainer">
+        <button class="leftButton" [routerLink]="['']">Accueil</button>
+        <div class="middleContainer">
+            <div class="bodyContainer" [hidden]="!bodyIsDisplay">
+                <img src="{{body}}">
+            </div>
+            <div class="engineContainer1" [hidden]="!engineIsDisplay">
+                <img src="{{engine}}">
+            </div>
+            <div class="engineContainer2" [hidden]="!engineIsDisplay">
+                <img src="{{engine}}">
+            </div>
+            <div class="wheelContainer1" [hidden]="!wheelIsDisplay">
+                <img src="{{wheel}}">
+            </div>
+            <div class="wheelContainer2" [hidden]="!wheelIsDisplay">
+                <img src="{{wheel}}">
+            </div>
+            <div class="wheelContainer3" [hidden]="!wheelIsDisplay">
+                <img src="{{wheel}}">
+            </div>
+            <div class="finContainer" [hidden]="!finIsDisplay">
+                <img src="{{fin}}">
+            </div>
+        </div>
+
+        <div class="bottomContainer">
+            <div class="body" *ngFor="let option of optionsBody">
+                <img src="{{option}}" (click)="getBodyUrl(option)">
+            </div>
+            <div class="engine" *ngFor="let option of optionsEngine">
+                <img src="{{option}}" (click)="getEngineUrl(option)">
+            </div>
+            <div class="wheel" *ngFor="let option of optionsWheel">
+                <img src="{{option}}" (click)="getWheelUrl(option)">
+            </div>
+            <div class="fin" *ngFor="let option of optionFin">
+                <img src="{{option}}" (click)="getFinUrl(option)">
+            </div>
+        </div>
+    </div>
+
+    <button class="rightButton" routerLink='/journey/{{theme}}'>Valider</button>
+
+
+</div>
