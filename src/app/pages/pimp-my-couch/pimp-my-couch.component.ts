@@ -44,6 +44,7 @@ export class PimpMyCouchComponent implements OnInit {
   fin = '';
 
   // DISPLAY DES IMAGES
+  titleIsDisplay = true;
   bodyIsDisplay = false;
   engineIsDisplay = false;
   wheelIsDisplay = false;
@@ -52,10 +53,6 @@ export class PimpMyCouchComponent implements OnInit {
   // ID PARAMMAP
   theme = '';
 
-  isUrban = false;
-  isSummer = false;
-  isWinter = false;
-
   ngOnInit(): void {
   }
 
@@ -63,19 +60,30 @@ export class PimpMyCouchComponent implements OnInit {
   getBodyUrl(url: string) {
     this.body = url;
     this.bodyIsDisplay = true;
-    this.theme = 'urban';
+    this.titleIsDisplay = false;
+    if (url === 'assets/images/tissuCouch.png') {
+      this.theme = 'summer';
+    } else {
+      this.theme = 'winter';
+    }
   }
   getEngineUrl(url: string) {
     this.engine = url;
     this.engineIsDisplay = true;
+    this.titleIsDisplay = false;
   }
   getWheelUrl(url: string) {
     this.wheel = url;
     this.wheelIsDisplay = true;
+    this.titleIsDisplay = false;
   }
   getFinUrl(url: string) {
     this.fin = url;
     this.finIsDisplay = true;
+    this.titleIsDisplay = false;
+    if (url === 'assets/images/aileron3.png') {
+      this.theme = 'urban';
+    }
   }
 
 }
