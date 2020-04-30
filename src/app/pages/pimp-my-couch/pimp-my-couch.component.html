@@ -1,10 +1,7 @@
 <div class="overallContainer">
-
-    <div class="leftButton">
-        <button>Accueil</button>
-    </div>
-
+    
     <div class="couchContainer">
+        <button class="leftButton" [routerLink]="['']">Accueil</button>
         <div class="middleContainer">
             <div class="bodyContainer" [hidden]="!bodyIsDisplay">
                 <img src="{{body}}">
@@ -45,8 +42,7 @@
         </div>
     </div>
 
-    <div class="rightButton">
-        <button>Valider</button>
-    </div>
+    <button class="rightButton" [routerLink]="['/journey, theme']">Valider</button>
+
 
 </div>

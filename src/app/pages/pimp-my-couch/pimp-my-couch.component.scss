@@ -1,6 +1,7 @@
 .overallContainer {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -13,13 +14,43 @@
 
 .leftButton {
     position: absolute;
-    top: 20%;
+    top: 70%;
     left: 5%;
+    font-family: 'Alegreya', serif;
+    font-size: 1.4rem;
+    color: white;
+    background-color:transparent;
+    outline:0;
+    transition: background-color 0.2s ease;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 2px solid #BA3A7E;
+}
+.leftButton:hover {
+    transition: linear all 0.05s;
+    background-color: #BA3A7E;
+    color: white;
+    box-shadow: 0px 0px 28px -8px rgba(186,58,126,1);
 }
 .rightButton {
     position: absolute;
-    top: 20%;
+    top: 72%;
     right: 5%;
+    font-family: 'Alegreya', serif;
+    font-size: 1.4rem;
+    color: white;
+    background-color: transparent;
+    outline:0;
+    transition: background-color 0.2s ease;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 2px solid #BA3A7E;
+}
+.rightButton:hover {
+    transition: linear all 0.05s;
+    background-color: #BA3A7E;
+     color: white;
+    box-shadow: 0px 0px 28px -8px rgba(186,58,126,1);
 }
 
 .couchContainer {
@@ -39,8 +70,8 @@
     left: 15%;
     right: 15%;
     bottom: 25%;
-    background-color: rgba(180, 180, 180, 0.4);
-    border-radius: 5px;
+    background-color: rgba(180, 180, 180, 0.3);
+    border-radius: 10px;
 }
 
 .bodyContainer {
@@ -128,8 +159,8 @@
     left: 5%;
     right: 5%;
     bottom: 0;
-    background-color: rgba(180, 180, 180, 0.4);
-    border-radius: 5px;
+    background-color: rgba(180, 180, 180, 0.3);
+    border-radius: 10px;
 }
 
 .body img {

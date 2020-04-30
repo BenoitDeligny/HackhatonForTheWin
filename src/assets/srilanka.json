@@ -1,0 +1,76 @@
+{
+  "theme": "summer",
+  "destination" : "Sri-Lanka",
+  "destinationDescription":"Le Sri-Lanka est une destination évocatrice ; île lointaine autrefois appelée Ceylan, elle faisait partie de la route de Epices. De part sa position géographique, c'est une terre riche qui propose un camaïeu de verts des rizières et des jardins d'épices, de plages magnifiques bordées de coctiers ou encore des montagnes magnifiques et colossales qui dominent le paysages d'une tranquille assurance.",
+  "destinationAnecdote":"Encore active au XIXe s, la terrible secte des Thugs se composait d’adorateurs de la déesse noire de la Destruction, Kali, à laquelle des temples sont encore dédiés notamment à Trincomalee. Les Thugs étranglaient rituellement leurs victimes avant de les dépouiller.Ces fanatiques, qui furent la terreur des colonisateurs britanniques, ont inspiré Spielberg dans « Indiana Jones et le Temple maudit ». Les extérieurs du film furent d’ailleurs tournés sur l’île, à Sigiriya.",
+  "destinationPicture1":"https://static01.nyt.com/images/2019/02/03/travel/03frugal-srilanka01/merlin_148552275_74c0d250-949c-46e0-b8a1-e6d499e992cf-superJumbo.jpg?quality=90&auto=webp",
+  "destinationPicture2":"https://www.trekmag.com/media/news/2020/01/teasing-trek-3__fit_687x458.jpg",
+  "destinationPicture3":"https://www.gayvoyageur.com/wp-content/uploads/2017/12/les-plus-belles-plages-tangalle.jpg",
+  "ride1":"Le pic d’Adam, pèlerinage pour tous au Sri Lanka : la plus légendaire randonnée du Sri Lanka. Parcours atypique puisqu’il est constitué de plus de 5000 marches. Cette balade éprouvante n’est pas une promenade de santé, vos genoux seront mis à rude épreuve. Le pic d’Adam est avant tout un lieu de pèlerinage aussi bien pour les hindous, les bouddhistes et les musulmans. C’est donc un mélange de voyageurs et de familles que vous croiserez dès 2 à 3h du matin sur le sentier.",
+  "ride2":"Lipton’s Seat, au cœur de l’histoire du thé au Sri Lanka :Le Lipton’s Seat est un panorama anciennement prisé par Sir Lipton en personne, qui aimait admirer le paysage qui a fait sa richesse. Situé à environ 45 min d’Haputale, vous pourrez y accéder en tuk tuk ou autre véhicule. Ici, se dévoilent à 360° des plantations de thé à flanc de montagne. De là, une balade au cœur des plantations vous attend pour une descente de 8 km jusqu’à l’usine de thé de Dambatene.  ",
+  "chillPlace":"Rien de tel que les plages pratiquées par les surfeurs du monde entier ; observer avec délectation ces derniers faire montre de leurs talents, assis sur le sable avec un cocktail à la main et un coucher de soleil progressif",
+  "chillPlacePicture":"https://ecole-surf-srilanka.com/wp-content/uploads/2019/08/surf-coaching-sri-lanka-sunrise.jpg",
+  "ride1Picture":"https://www.caingram.info/Sri_lanka/Hill_country/adams-peak.jpg",
+  "ride2Picture":"https://i2.wp.com/www.a-ticket-to-ride.com/wp-content/uploads/2018/04/haputale-plantations-lipton-seat.jpg?fit=1633%2C705",
+  "receipe1": [
+    {"name:":"Cutlets (boulettes de thons et pommes de terres à la sri lankaise)"},
+    {"picture":"https://assets.afcdn.com/recipe/20190531/93300_w648h414c1cx368cy243cxt0cyt0cxb736cyb487.jpg"},
+    {"preparationTime":"30min"},
+    {"receipe1Ingredients":
+      [
+        {"id":1,"ingredient":"2 pommes de terre"},
+        {"id":2,"ingredient":"1 oignon rouge"},
+        {"id":3,"ingredient":"1 piment vert"},
+        {"id":4,"ingredient":"1 boîte de thon moyenne"},
+        {"id":5,"ingredient":"3 oeufs"},
+        {"id":6,"ingredient":"100 g de chapelure"},
+        {"id":7,"ingredient":"Sel"},
+        {"id":8,"ingredient":"poivre"}
+      ]
+    },
+    {"receipe1Steps":
+      [
+        {"step":1, "instruction":"Cuire les pommes de terre, départ eau froide, durant 20 minutes."},
+        {"step":2, "instruction":"Bien écraser les pommes de terre"},
+        {"step":3, "instruction":"Hacher le piment, l'oignon et les feuilles de coriandre."},
+        {"step":4, "instruction":"Mélanger la pomme de terre, l'oignon, la coriandre, le piment et le thon puis casser un oeuf dans le mélange."},
+        {"step":5, "instruction":"Malaxer puis faire des boulettes."},
+        {"step":6, "instruction":"Dans un bol, battre deux oeufs, y tremper les boulettes puis les rouler dans la chapelure."},
+        {"step":7, "instruction":"Frire les boulettes dans l'huile bien chaude."},
+        {"step":8, "instruction":"Les sortir lorsqu'elles sont dorées."}
+      ]
+    }
+  ],
+  "receipe2": [
+    {"name":"Parippu curry"},
+    {"picture":"https://www.saffrontrail.com/wp-content/uploads/2016/09/kerala-parippu-curry-yellow-moong-dal-with-coconut.1024x1024.jpg"},
+    {"preparationTime":"45min"},
+    {"receipe2Ingredients":
+      [
+      {"id":1,"ingredient":"250 g de lentilles corail "},
+      {"id":2,"ingredient":"2 gousses d'ail , hachées"},
+      {"id":3,"ingredient":"2 oignons , hachés"},
+      {"id":4,"ingredient":"4 feuilles de curry , émincées"},
+      {"id":5,"ingredient":"1/4 cuillère à café : safran, curry"},
+      {"id":6,"ingredient":"2 clous de girofle"},
+      {"id":7,"ingredient":"250 ml de lait de coco"},
+      {"id":8,"ingredient":"2 cuillères à soupe d'huile végétale"},
+      {"id":9,"ingredient":"1 piment vert"},
+      {"id":10,"ingredient":"Sel"},
+      {"id":11,"ingredient":"1/2 citron vert"}
+      ]
+    },
+    {"receipe2Steps":[
+      {"step":1, "instruction":"Bien laver les lentilles avec au moins trois changements d'eau."},
+      {"step":2, "instruction":"Les faire bouillir dans les 300 ml d'eau additionnée du safran, de la poudre de piment, du curcuma, du curry et des clous de girofle."},
+      {"step":3, "instruction":"Lorsque la  couleur des lentilles passe du corail au jaune, soit environ 15 minutes, les retirer du  feu et les verser dans un grand saladier."},
+      {"step":4, "instruction":"Chauffer l'huile dans une très grande poêle à feu moyen. Y verser les graines de moutarde, de fenugrec, et de cumin et les faire sauter pendant 20 secondes."},
+      {"step":5, "instruction":"Ajouter l'oignon et l'ail et bien mélanger pendant 20 secondes."},
+      {"step":6, "instruction":"Ajouter les lentilles bouillies et bien mélanger. Cuire pendant 5 minutes."},
+      {"step":7, "instruction":"Ajouter le lait de coco et saler au goût. Cuire jusqu'à ce que le curry commence à bouillir."},
+      {"step":8, "instruction":"Retirer du feu et  ajouter le jus de citron vert."},
+      {"step":9, "instruction":"Accompagner du piment vert cru ou légèrement frit."}
+      ]
+    }
+  ]
+}

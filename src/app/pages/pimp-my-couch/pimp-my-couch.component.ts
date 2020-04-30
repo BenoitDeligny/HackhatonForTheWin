@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { DestinationsService } from 'src/app/shared/destinations.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-pimp-my-couch',
@@ -8,7 +9,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 })
 export class PimpMyCouchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient, private destinationService: DestinationsService) { }
 
   // OPTIONS DU CANAPE
   body1Url = 'assets/images/tissuCouch.png';
@@ -43,11 +44,14 @@ export class PimpMyCouchComponent implements OnInit {
   fin = '';
 
   // DISPLAY DES IMAGES
+  titleIsDisplay = true;
   bodyIsDisplay = false;
   engineIsDisplay = false;
   wheelIsDisplay = false;
   finIsDisplay = false;
 
+  // ID PARAMMAP
+  theme = '';
 
   ngOnInit(): void {
   }
@@ -56,18 +60,30 @@ export class PimpMyCouchComponent implements OnInit {
   getBodyUrl(url: string) {
     this.body = url;
     this.bodyIsDisplay = true;
+    this.titleIsDisplay = false;
+    if (url === 'assets/images/tissuCouch.png') {
+      this.theme = 'summer';
+    } else {
+      this.theme = 'winter';
+    }
   }
   getEngineUrl(url: string) {
     this.engine = url;
     this.engineIsDisplay = true;
+    this.titleIsDisplay = false;
   }
   getWheelUrl(url: string) {
     this.wheel = url;
     this.wheelIsDisplay = true;
+    this.titleIsDisplay = false;
   }
   getFinUrl(url: string) {
     this.fin = url;
     this.finIsDisplay = true;
+    this.titleIsDisplay = false;
+    if (url === 'assets/images/aileron3.png') {
+      this.theme = 'urban';
+    }
   }
 
 }
