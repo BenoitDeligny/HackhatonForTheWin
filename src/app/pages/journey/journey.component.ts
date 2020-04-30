@@ -38,6 +38,6 @@ export class JourneyComponent implements OnInit {
     this.sriLankaDestination();
     setTimeout(() => {
       this.selectedDestination = this.laponie;
-    }, 2000);
+    }, 1000);
   }
 }
