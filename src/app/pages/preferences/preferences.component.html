@@ -1,1 +1,138 @@
-<p>preferences works!</p>
+<!-- WELCOME -->
+<section id="headerPict" [ngStyle]="{'background-image': 'url(' + randomResult[4] + ')', 'background-attachment': 'fixed', 'z-index': '-1'}">
+  <div class="container">
+  </div>
+</section>
+
+<section class="normal-scroll {{randomResult[0]}}" id="welcome">
+  <div class="container {{randomResult[0]}}">
+    <h1 class="h1Welcome" >Bienvenue à {{randomResult[1]}}</h1>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="normal-scroll">
+  <div class="container">
+    <div>
+      <p>{{randomResult[2]}}</p>
+      <br>
+      <h2>Point d'intérêt</h2>
+      <p>{{randomResult[3]}}</p>
+    </div>
+    <div class="cardContainer">
+      <div class="card">
+        <h3>Ballade 1</h3>
+        <p>{{randomResult[7]}}</p>
+      </div>
+      <div class="card">
+        <img src="{{randomResult[11]}}" alt="">
+      </div>
+    </div>
+    <div class="cardContainer">
+      <div class="card">
+        <img src="{{randomResult[12]}}" alt="">
+      </div>
+      <div class="card">
+        <h3>Ballade 2</h3>
+        <p>{{randomResult[8]}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECEIPE 1 -->
+<section id="foodPict" [ngStyle]="{'background-image': 'url(' + srilanka.receipe1[1].picture + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
+  <div class="container">
+  </div>
+</section>
+
+<section class="normal-scroll">
+  <div class="container">
+    <h1>Spécialité locale : {{srilanka.receipe1[0].name}}</h1>
+    <h2>Temps de préparation: {{srilanka.receipe1[2].preparationTime}}</h2>
+    <div class="cardContainer">
+      <div class="card">
+        <h3>Ingrédients</h3>
+        <div *ngFor="let ingredient of srilanka.receipe1[3].receipe1Ingredients">
+          <p>{{ingredient.ingredient}}</p>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Instructions</h3>
+        <div *ngFor="let step of srilanka.receipe1[4].receipe1Steps">
+          <div class="stepLign">
+            <div class="stepNum {{randomResult[0]}}">
+              {{step.step}}
+            </div>
+            <div class="step">
+              {{step.instruction}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECEIPE 2 -->
+<section id="foodPict2" [ngStyle]="{'background-image': 'url(' + srilanka.receipe2[1].picture + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
+  <div class="container">
+  </div>
+</section>
+
+<section class="normal-scroll">
+  <div class="container">
+    <h1>Spécialité locale : {{srilanka.receipe2[0].name}}</h1>
+    <h2>Temps de préparation: {{srilanka.receipe2[2].preparationTime}}</h2>
+    <div class="cardContainer">
+      <div class="card">
+        <h3>Ingrédients</h3>
+        <div *ngFor="let ingredient of srilanka.receipe2[3].receipe2Ingredients">
+          <p>{{ingredient.ingredient}}</p>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Instructions</h3>
+        <div *ngFor="let step of srilanka.receipe2[4].receipe2Steps">
+          <div class="stepLign">
+            <div class="stepNum {{srilanka.theme}}">
+              {{step.step}}
+            </div>
+            <div class="step">
+              {{step.instruction}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHILL -->
+<section id="chillPict" [ngStyle]="{'background-image': 'url(' + srilanka.chillPlacePicture + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
+  <div class="container">
+  </div>
+</section>
+
+<section class="normal-scroll">
+  <div class="container">
+    <h1>Notre coup de coeur</h1>
+    <p>
+      {{srilanka.chillPlace}}
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<section class="normal-scroll {{srilanka.theme}}" id="goodbye">
+  <div class="container {{srilanka.theme}}">
+    <h1 class="{{srilanka.theme}}">
+      Voyagez de votre canapé avec Sofa'r
+    </h1>
+  </div>
+</section>
+
+<section id="footerPict" [ngStyle]="{'background-image': 'url(' + srilanka.destinationPicture1 + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
+  <div class="container {{srilanka.theme}}">
+  </div>
+</section>

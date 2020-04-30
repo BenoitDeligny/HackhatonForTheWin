@@ -11,12 +11,12 @@ import { Observable } from 'rxjs';
   styleUrls: ['./journey.component.scss']
 })
 export class JourneyComponent implements OnInit {
-
   berlin: Destination;
   srilanka: Destination;
   laponie: Destination;
 
   destinations: Destination[] = [];
+  randomResult: any[];
 
   constructor(private router: Router, private route: ActivatedRoute, private destinationService: DestinationsService) { }
 
@@ -42,7 +42,17 @@ export class JourneyComponent implements OnInit {
 
     this.route.paramMap.subscribe(
       params => this.selectedDestination = this.destinationService.getDestinationByTheme(params.get('theme')
-    ));
+      ));
+    this.destinationService.getBerlin().subscribe(
+      (data) => { this.berlin = data; });
+
+    this.destinationService.getSriLanka().subscribe(
+      (data) => { this.srilanka = data; });
+
+    this.destinationService.getLaponie().subscribe(
+      (data) => { this.laponie = data; });
+
+    this.randomResult = this.destinationService.randomizer();
 
     this.berlinDestination();
     this.laponieDestination();
@@ -52,4 +62,7 @@ export class JourneyComponent implements OnInit {
     }, 1000);
   }
 }
+
+
+
 
