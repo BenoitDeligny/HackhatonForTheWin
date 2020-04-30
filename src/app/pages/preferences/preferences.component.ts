@@ -95,37 +95,26 @@ export class PreferencesComponent implements OnInit {
         }
       }
     }
-    // console.log(randomValue);
 
     for (let index = 0; index < necessaryString.length; index++) {
 
-    // for (const element of necessaryString) {
 
       const random = ['berlin', 'srilanka', 'laponie'];
       const sortPic = random[Math.floor(Math.random() * random.length)];
 
       if (sortPic === 'berlin') {
         this.randomResult.push(randomValue[index]);
-        // Object.assign(resultObject, {necessaryString[index]: randomValue[index]});
-        // console.log(sortPic);
 
         console.log(randomValue[index]);
       }
       if (sortPic === 'srilanka') {
-        // console.log(sortPic);
 
         this.randomResult.push(randomValue[index + 15]);
-        // Object.assign(resultObject, {necessaryString[index]: randomValue[index + 15]});
-
-        // console.log(randomValue[index + 15]);
       }
       if (sortPic === 'laponie') {
         console.log(sortPic);
 
         this.randomResult.push(randomValue[index + 30]);
-        // Object.assign(resultObject, {necessaryString[index]: randomValue[index + 30]});
-
-        // console.log(randomValue[index + 30]);
       }
     }
     console.log(resultObject);

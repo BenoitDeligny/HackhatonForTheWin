@@ -20,7 +20,8 @@ export class JourneyComponent implements OnInit {
 
   constructor(private router: Router, private route: ActivatedRoute, private destinationService: DestinationsService) { }
 
-  selectedDestination: Observable<Destination>;
+  selectedDestination: Destination;
+  destinationSelected: Observable<Destination>;
 
   berlinDestination() {
     this.destinationService.getBerlin().subscribe(
@@ -41,7 +42,7 @@ export class JourneyComponent implements OnInit {
   ngOnInit(): void {
 
     this.route.paramMap.subscribe(
-      params => this.selectedDestination = this.destinationService.getDestinationByTheme(params.get('theme')
+      params => this.destinationSelected = this.destinationService.getDestinationByTheme(params.get('theme')
       ));
     this.destinationService.getBerlin().subscribe(
         (data) => {this.berlin = data; });
