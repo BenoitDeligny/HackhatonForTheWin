@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { DestinationsService } from 'src/app/shared/destinations.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-pimp-my-couch',
@@ -8,7 +9,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 })
 export class PimpMyCouchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient, private destinationService: DestinationsService) { }
 
   // OPTIONS DU CANAPE
   body1Url = 'assets/images/tissuCouch.png';
@@ -48,6 +49,12 @@ export class PimpMyCouchComponent implements OnInit {
   wheelIsDisplay = false;
   finIsDisplay = false;
 
+  // ID PARAMMAP
+  theme = '';
+
+  isUrban = false;
+  isSummer = false;
+  isWinter = false;
 
   ngOnInit(): void {
   }
@@ -56,6 +63,7 @@ export class PimpMyCouchComponent implements OnInit {
   getBodyUrl(url: string) {
     this.body = url;
     this.bodyIsDisplay = true;
+    this.theme = 'urban';
   }
   getEngineUrl(url: string) {
     this.engine = url;

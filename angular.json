@@ -127,12 +127,5 @@
       }
     }
   },
-<<<<<<< HEAD
   "defaultProject": "hackForTheWin"
-=======
-  "defaultProject": "hackForTheWin",
-  "cli": {
-    "analytics": "0c542638-8935-4e18-9341-51dc3cc884c3"
-  }
->>>>>>> feat/journeyCSS
 }
