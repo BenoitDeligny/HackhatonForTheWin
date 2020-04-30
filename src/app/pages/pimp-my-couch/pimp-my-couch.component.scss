@@ -1,4 +1,8 @@
 .overallContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 100%;
     background-image: url(src/assets/images/backPimp1.jpg);
@@ -7,95 +11,157 @@
     background-position: bottom;
 }
 
+.leftButton {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+.rightButton {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}
+
 .couchContainer {
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     height: 100%;
     width: 100%;
 }
 
-.leftContainer {
+.middleContainer {
+    position: absolute;
     display: flex;
     justify-content: center;
-    height: 80%;
-    width: 30%;
-    margin: 3%;
-    background-color: rgba(255, 255, 255, 0.4);
+    align-items: center;
+    top: 0;
+    left: 15%;
+    right: 15%;
+    bottom: 25%;
+    background-color: rgba(180, 180, 180, 0.4);
     border-radius: 5px;
 }
 
-.rightContainer {
-    display: flex;
-    justify-content: center;
-    height: 40%;
-    width: 45%;
-    margin: 10px;
-    margin-right: 3%;
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 5px;
+.bodyContainer {
+    position: absolute;
+    height: 400px;
+    width: 800px;
+    z-index: 1;
 }
-
-.stuffContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
-    width: 100%;
-}
-
-.body,
-.engine,
-.wheel,
-.fin {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 75%;
-    height: 45%;
-    background-color: transparent;
-}
-
-.body img {
+.bodyContainer img {
     height: inherit;
     width: inherit;
 }
 
-.engine img {
-    height: 150px;
-    width: 150px;
+.engineContainer1 {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    height: 200px;
+    width: 200px;
+    z-index: 2;
+}
+.engineContainer2 {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    height: 200px;
+    width: 200px;
+    z-index: 2;
+}
+.engineContainer1 img {
+    height: inherit;
+    width: inherit;
+}
+.engineContainer2 img {
+    height: inherit;
+    width: inherit;
 }
 
-.fin img {
-    height: 150px;
-    width: 250px;
+.wheelContainer1 {
+    position: absolute;
+    top: 75%;
+    right: 15%;
+    z-index: 2;
 }
-.BodyParts{
+.wheelContainer2 {
+    position: absolute;
+    top: 65%;
+    right: 5%;
+    z-index: 2;
+}
+.wheelContainer3 {
+    position: absolute;
+    top: 62%;
+    left: 15%;
+    z-index: 0;
+}
+.wheelContainer1 img {
+    height: 80px;
+    width: 160px;
+}
+.wheelContainer2 img {
+    height: 80px;
+    width: 160px;
+}
+.wheelContainer3 img {
+    height: 80px;
+    width: 160px;
+}
+
+
+.finContainer {
+    position: absolute;
+    top: -23%;
+    left: 40%;
+    z-index: 2;
+}
+
+
+.bottomContainer {
+    position: absolute;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 80%;
-    width: 10%;
-    margin-left: 3%;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 80%;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    background-color: rgba(180, 180, 180, 0.4);
+    border-radius: 5px;
 }
-.btn {
-    margin: 2%;
-    font-family: 'Alegreya', serif;
-    font-size: 1rem;
-    color: rgba(0,0,0,0.8);;
-    background-color: rgba(255,255,255,0.7);
-    outline:0;
-    transition: background-color 0.4s ease;
-    font-family: 'Ubuntu', sans-serif;
-    border-radius: 20px;
-    padding: 1rem;
-    margin-bottom: 12%;
-  }
-  .btn:hover {
-    transition: all 400ms;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  }
-  
 
+.body img {
+    height: 120px;
+    width: 240px;
+}
+.engine img {
+    height: 100px;
+    width: 100px;
+}
+.wheel img {
+    height: 70px;
+    width: 70px;
+}
+.fin img {
+    height: 80px;
+    width: 160px;
+}
+
+.body img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.engine img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.wheel img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.fin img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
