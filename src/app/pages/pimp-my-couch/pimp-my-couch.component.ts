@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DestinationsService } from 'src/app/shared/destinations.service';
 import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pimp-my-couch',
@@ -54,6 +55,7 @@ export class PimpMyCouchComponent implements OnInit {
   theme = '';
 
   ngOnInit(): void {
+
   }
 
   // METHODS

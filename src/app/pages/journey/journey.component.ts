@@ -3,6 +3,7 @@ import { DestinationsService } from 'src/app/shared/destinations.service';
 import { Destination } from 'src/app/shared/destination';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-journey',
@@ -19,7 +20,7 @@ export class JourneyComponent implements OnInit {
 
   constructor(private router: Router, private route: ActivatedRoute, private destinationService: DestinationsService) { }
 
-  selectedDestination: Destination;
+  selectedDestination: Observable<Destination>;
 
   berlinDestination() {
     this.destinationService.getBerlin().subscribe(
@@ -38,18 +39,16 @@ export class JourneyComponent implements OnInit {
 
 
   ngOnInit(): void {
-    /* this.selectedDestination = this.route.paramMap.subscribe(
-      (params: ParamMap) => this.destinations.find(
-        (theme) => {
-          this.selectedDestination.theme === params.get('theme');
-        }
-      )
-    ); */
+
+    this.route.paramMap.subscribe(
+      params => this.selectedDestination = this.destinationService.getDestinationByTheme(params.get('theme')
+    ));
+
     this.berlinDestination();
     this.laponieDestination();
     this.sriLankaDestination();
     setTimeout(() => {
-      this.selectedDestination = this.laponie;
+      console.log(this.selectedDestination);
     }, 1000);
   }
 }

@@ -27,6 +27,7 @@
     border: 2px solid #BA3A7E;
 }
 .leftButton:hover {
+    cursor: pointer;
     transition: linear all 0.05s;
     background-color: #BA3A7E;
     color: white;
@@ -34,7 +35,7 @@
 }
 .rightButton {
     position: absolute;
-    top: 72%;
+    top: 71%;
     right: 5%;
     font-family: 'Alegreya', serif;
     font-size: 1.4rem;
@@ -47,6 +48,7 @@
     border: 2px solid #BA3A7E;
 }
 .rightButton:hover {
+    cursor: pointer;
     transition: linear all 0.05s;
     background-color: #BA3A7E;
      color: white;

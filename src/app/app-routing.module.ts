@@ -5,7 +5,7 @@ import { JourneyComponent } from './pages/journey/journey.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 
 const routes: Routes = [
-  {path: 'journey', component: JourneyComponent},
+  {path: 'journey/:theme', component: JourneyComponent},
   {path: 'pimped', component: PimpMyCouchComponent},
   {path: '', component: HomepageComponent},
 ];
