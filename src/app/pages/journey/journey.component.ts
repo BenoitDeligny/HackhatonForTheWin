@@ -16,17 +16,17 @@ export class JourneyComponent implements OnInit {
 
   selectedDestination: Destination;
 
-  berlinDestination(){
+  berlinDestination() {
     this.destinationService.getBerlin().subscribe(
       (data) => {this.berlin = data; });
   }
 
-  laponieDestination(){
+  laponieDestination() {
     this.destinationService. getLaponie().subscribe(
       (data) => {this.laponie = data; });
   }
 
-  sriLankaDestination(){
+  sriLankaDestination() {
     this.destinationService. getSriLanka().subscribe(
       (data) => {this.srilanka = data; });
   }
@@ -38,6 +38,6 @@ export class JourneyComponent implements OnInit {
     this.sriLankaDestination();
     setTimeout(() => {
       this.selectedDestination = this.laponie;
-    },500)
+    }, 2000);
   }
 }

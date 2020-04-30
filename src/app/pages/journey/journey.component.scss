@@ -1,57 +1,139 @@
 .h1Welcome{
   color: white;
+  text-align: center;
+  line-height: 53px;
 }
-
 h1{
   text-align: center;
-  font-size: xx-large;
+  font-size: 60px;
   padding: 2vh;
+  font-variant: small-caps;
+  font-family: 'Alegreya', serif;
 }
-
-h2{
+h2, h3{
+  color:black;
+  margin: 40px 0px 0px 0px;
+  font-size: 2rem;
+  font-variant: small-caps;
+  font-family: 'Alegreya', serif;
+}
+h3 {
+  margin-top: 0px;
+}
+h4 {
+  margin-top: 10px;
+  margin-bottom: 40px;
   text-align: center;
+  font-size: 1.3rem;
 }
-
 p{
   margin: 5px 0;
 }
-
-//CARDS
-.card{
-  width: 40%;
-  border-radius: 10px;
-  margin: 20px 0px;
+.balade {
+  margin-top: 100px;
 }
-
-.card img{
-  width: 100%;
-  border-radius: 10px;
+//hr
+hr {
+  border: 3px solid  #BA3A7E;
+  width: 34%;
+  margin-bottom: 20px;
 }
-
-.cardContainer{
-  width: 100%;
+.hr-interested-point {
+  width: 90%;
+}
+.hr-ride{
+  width: 50%;
+}
+.hr-ingredients{
+  width: 65%;
+}
+.hr-instructions {
+  width: 85%;
+}
+//titles
+.speciality-title {
+  text-align: center;
+  border : 3px dotted #BA3A7E;
+  width: 60%;
+  margin-left:20%;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.instructions-title {
+  color:black;
+  margin: 40px 0px 0px 0px;
+  font-size: 2rem;
+  font-variant: small-caps;
+  font-family: 'Alegreya', serif;
+  text-align: center;
+}
+//Ingredients
+.stepLign, .ingredientLign{
   display: flex;
-  justify-content: space-evenly;
-  margin: 20px 0px;
 }
-
-.stepLign{
-  display: flex;
+.ingredientLign img {
+  width: 50px;
 }
-
+.ingredients{
+  width:5px;
+  height: 30px;
+  margin-right: 10px;
+}
+//Instructions
 .stepNum{
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  padding: 3px 5px;
+  padding: 3px 8px;
+  margin: 0 10px 10px 0;
   text-align: center;
   color: white;
-}
+  background-color: #BA3A7E;
 
+}
+//CARDS
+.card{
+  width: 40%;
+  border-radius: 10px;
+  margin: 20px 0px 20px;
+  text-align: justify;
+  font-size: 3rem;
+}
+.card-instructions {
+  width: 30%;
+  border-radius: 10px;
+  margin: 20px 0px 20px;
+  text-align: justify;
+  font-size: 3rem;
+  margin-left: -750px;
+}
+.card-ingredients {
+  width: 40%;
+  border-radius: 10px;
+  margin: 20px 0px 20px;
+  text-align: justify;
+  font-size: 3rem;
+  margin-left: 50px;
+}
+.card img{
+  width: 100%;
+  border-radius: 10px;
+}
+.description-interested-point-cardContainer, .cardContainer {
+  display: flex;
+  justify-content: space-around;
+  text-align: justify;
+}
+.description-card, .interested-point-card {
+  margin: 10px 20px 10px 20px;
+  width: 40%;
+}
 .step{
-  margin-left: 10px;
+  margin: 2.5px 10px 10px 0;
 }
-
+.chill {
+  text-align: center;
+}
 //SECTION
 section {
   position: relative;
@@ -60,59 +142,48 @@ section {
   transform-style: inherit;
   padding: 20px 10px;
 }
-
 #welcome, #goodbye{
   padding: 0;
   height: 10%;
 }
-
 #headerPict, #footerPict{
   height: 90%;
 }
-
 section, section:before {
   background: 50% 50% / cover;
 }
-
 section:before {
   content: "";
-  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
-
 .normal-scroll {
   background: #fff;
   transform: translateZ(0);
   min-height: 0;
   background-color: rgb(231, 231, 231);
 }
-
 .container {
   margin: 0 auto;
   width: 100%;
   height: auto;
   background-color: rgb(231, 231, 231);
 }
-
 // DEPENDING ON THEME
 .winter{
-  background-color: #424242;
+  background-color: #4f8dc6;
   color: white;
 }
-
 .summer{
-  background-color: #3299BB;
+  background-color: #759b01;
   color: white;
 }
-
 .urban{
   background-color: rgb(119, 118, 118);
   color: white;
 }
-
 * {
   margin: 0;
   padding: 0;
