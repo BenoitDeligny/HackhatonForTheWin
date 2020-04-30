@@ -44,6 +44,24 @@ export class JourneyComponent implements OnInit {
       params => this.selectedDestination = this.destinationService.getDestinationByTheme(params.get('theme')
       ));
     this.destinationService.getBerlin().subscribe(
+        (data) => {this.berlin = data; });
+
+    this.destinationService. getSriLanka().subscribe(
+        (data) => {this.srilanka = data; });
+
+    this.destinationService. getLaponie().subscribe(
+        (data) => {this.laponie = data; });
+
+    this.randomResult = this.destinationService.randomizer();
+
+    this.berlinDestination();
+    this.laponieDestination();
+    this.sriLankaDestination();
+    setTimeout(() => {
+        console.log(this.selectedDestination);
+      }, 1000);
+
+    this.destinationService.getBerlin().subscribe(
       (data) => { this.berlin = data; });
 
     this.destinationService.getSriLanka().subscribe(
@@ -52,15 +70,8 @@ export class JourneyComponent implements OnInit {
     this.destinationService.getLaponie().subscribe(
       (data) => { this.laponie = data; });
 
-    this.randomResult = this.destinationService.randomizer();
+      }
 
-    this.berlinDestination();
-    this.laponieDestination();
-    this.sriLankaDestination();
-    setTimeout(() => {
-      console.log(this.selectedDestination);
-    }, 1000);
-  }
 }
 
 

@@ -11,7 +11,6 @@ const routes: Routes = [
   {path: 'pimped', component: PimpMyCouchComponent},
   {path: '', component: HomepageComponent},
   {path: 'random', component: PreferencesComponent}
-
 ];
 
 @NgModule({

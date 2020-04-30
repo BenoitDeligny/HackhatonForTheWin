@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DestinationsService } from 'src/app/shared/destinations.service';
-import { Destination } from 'src/app/shared/destination';
+import { Destination, Receipe, Ingredient, Step } from 'src/app/shared/destination';
 
 @Component({
   selector: 'app-preferences',
@@ -16,7 +16,7 @@ export class PreferencesComponent implements OnInit {
   randomDestination: Destination;
 
   destinations: Destination[] = [];
-
+  randomResult: any;
   random: any[];
 
   constructor(private destinationService: DestinationsService) { }
@@ -81,7 +81,12 @@ export class PreferencesComponent implements OnInit {
     ];
 
     const randomValue = [];
-    const randomResult = [];
+    this.randomResult = [];
+
+    const resultObject = {
+    };
+
+
 
     for (const destination of this.destinations) {
       for (const element in destination) {
@@ -100,7 +105,8 @@ export class PreferencesComponent implements OnInit {
       const sortPic = random[Math.floor(Math.random() * random.length)];
 
       if (sortPic === 'berlin') {
-        randomResult.push(randomValue[index]);
+        this.randomResult.push(randomValue[index]);
+        // Object.assign(resultObject, {necessaryString[index]: randomValue[index]});
         // console.log(sortPic);
 
         console.log(randomValue[index]);
@@ -108,18 +114,23 @@ export class PreferencesComponent implements OnInit {
       if (sortPic === 'srilanka') {
         // console.log(sortPic);
 
-        randomResult.push(randomValue[index + 15]);
+        this.randomResult.push(randomValue[index + 15]);
+        // Object.assign(resultObject, {necessaryString[index]: randomValue[index + 15]});
+
         // console.log(randomValue[index + 15]);
       }
       if (sortPic === 'laponie') {
         console.log(sortPic);
 
-        randomResult.push(randomValue[index + 30]);
+        this.randomResult.push(randomValue[index + 30]);
+        // Object.assign(resultObject, {necessaryString[index]: randomValue[index + 30]});
+
         // console.log(randomValue[index + 30]);
       }
     }
-    console.log(randomResult);
-    return randomResult;
+    console.log(resultObject);
+    console.log(this.randomResult);
+    return this.randomResult;
 
   }
 
