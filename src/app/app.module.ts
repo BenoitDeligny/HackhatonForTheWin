@@ -7,6 +7,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { PimpMyCouchComponent } from './pages/pimp-my-couch/pimp-my-couch.component';
 import { PreferencesComponent } from './pages/preferences/preferences.component';
 import { JourneyComponent } from './pages/journey/journey.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { JourneyComponent } from './pages/journey/journey.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
