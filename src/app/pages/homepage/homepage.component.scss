@@ -77,11 +77,37 @@ hr {
 
 }
 .btn:hover {
+  cursor: pointer;
   transition: linear all 0.05s;
   background-color: #BA3A7E;
   color: white;
   box-shadow: 0px 0px 28px -8px rgba(186,58,126,1);
 }
+
+.randombtn {
+  font-family: 'Alegreya', serif;
+  font-size: 0.7rem;
+  color: rgba(0,0,0,0.5);
+  background-color: rgba(255,255,255,0.4);
+  outline:0;
+  transition: background-color 0.2s ease;
+  font-family: 'Ubuntu', sans-serif;
+  border-radius: 20px;
+  padding: 1rem;
+  position: absolute;
+  top: 155%;
+  right: 15%;
+  border: 2px solid #BA3A7E;
+  margin-bottom: 70px;
+  &:hover {
+    cursor: pointer;
+    transition: linear all 0.05s;
+    background-color: #BA3A7E;
+    color: white;
+   box-shadow: 0px 0px 28px -8px rgba(186,58,126,1);
+  }
+}
+
 .important-text {
   color:#BA3A7E;
   font-weight: bold;

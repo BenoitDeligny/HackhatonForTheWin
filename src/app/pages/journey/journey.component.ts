@@ -41,17 +41,14 @@ export class JourneyComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.route.paramMap.subscribe(
-      params => this.destinationSelected = this.destinationService.getDestinationByTheme(params.get('theme')
-      ));
     this.destinationService.getBerlin().subscribe(
-        (data) => {this.berlin = data; });
+      (data) => { this.berlin = data; });
 
-    this.destinationService. getSriLanka().subscribe(
-        (data) => {this.srilanka = data; });
+    this.destinationService.getSriLanka().subscribe(
+      (data) => { this.srilanka = data; });
 
-    this.destinationService. getLaponie().subscribe(
-        (data) => {this.laponie = data; });
+    this.destinationService.getLaponie().subscribe(
+      (data) => { this.laponie = data; });
 
     this.randomResult = this.destinationService.randomizer();
 
@@ -59,8 +56,15 @@ export class JourneyComponent implements OnInit {
     this.laponieDestination();
     this.sriLankaDestination();
     setTimeout(() => {
-        console.log(this.selectedDestination);
-      }, 1000);
+      console.log(this.destinationService.exportName());
+      if (this.destinationService.exportName() === 'berlin') {
+        return this.selectedDestination = this.berlin;
+      } else if (this.destinationService.exportName() === 'srilanka') {
+        return this.selectedDestination = this.srilanka;
+      } else {
+        return this.selectedDestination = this.laponie;
+      }
+    }, 1000);
 
     this.destinationService.getBerlin().subscribe(
       (data) => { this.berlin = data; });
@@ -71,7 +75,7 @@ export class JourneyComponent implements OnInit {
     this.destinationService.getLaponie().subscribe(
       (data) => { this.laponie = data; });
 
-      }
+  }
 
 }
 

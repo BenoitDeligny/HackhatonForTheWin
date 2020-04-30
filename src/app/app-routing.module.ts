@@ -7,7 +7,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { PreferencesComponent } from './pages/preferences/preferences.component';
 
 const routes: Routes = [
-  {path: 'journey/:theme', component: JourneyComponent},
+  {path: 'journey', component: JourneyComponent},
   {path: 'pimped', component: PimpMyCouchComponent},
   {path: '', component: HomepageComponent},
   {path: 'random', component: PreferencesComponent}

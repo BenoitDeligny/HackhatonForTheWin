@@ -14,6 +14,7 @@ export class DestinationsService {
   berlinUrl = 'assets/berlin.json';
   srilankanUrl = 'assets/srilanka.json';
   laponieUrl = 'assets/laponie.json';
+  name: string;
 
   getBerlin(): Observable<any> {
     return this.http.get<any>(this.berlinUrl).pipe(
@@ -48,17 +49,24 @@ export class DestinationsService {
       return this.getLaponie()[key];
     }
   }
-  getDestinationByTheme(theme: string) {
-    if (theme === 'urban') {
+
+  getDestinationByName(name: string) {
+    if (name === 'berlin') {
       return this.http.get<any>(this.berlinUrl);
-    } else if (theme === 'winter') {
+    } else if (name === 'laponie') {
       return this.http.get<any>(this.laponieUrl);
     } else {
       return this.http.get<any>(this.srilankanUrl);
     }
   }
 
+  getName(name) {
+    this.name = name;
+  }
 
+  exportName() {
+    return this.name;
+  }
 
   randomizer() {
     const necessaryString = [
