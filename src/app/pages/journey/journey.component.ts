@@ -14,15 +14,20 @@ export class JourneyComponent implements OnInit {
   srilanka: Destination;
   laponie: Destination;
 
+  randomResult: any[];
 
   ngOnInit(): void {
     this.destinationService.getBerlin().subscribe(
       (data) => {this.berlin = data; });
+
     this.destinationService. getSriLanka().subscribe(
       (data) => {this.srilanka = data; });
+
     this.destinationService. getLaponie().subscribe(
       (data) => {this.laponie = data; });
-      }
+
+    this.randomResult = this.destinationService.randomizer();
+    }
 }
 
 
