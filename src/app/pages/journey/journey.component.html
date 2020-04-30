@@ -1,1 +1,173 @@
-<p>journey works!</p>
+<!-- WELCOME -->
+<section id="headerPict" [ngStyle]="{'background-image': 'url(' + selectedDestination.destinationPicture1 + ')', 'background-attachment': 'fixed', 'z-index': '-1'}">
+  <div class="container">
+  </div>
+</section>
+
+<section class="normal-scroll {{selectedDestination.theme}}" id="welcome">
+  <div class="container {{selectedDestination.theme}}">
+    <h1 class="h1Welcome">{{selectedDestination.destination}}</h1>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="normal-scroll">
+  <div class="container">
+    <div class="description-interested-point-cardContainer">
+      <div class="description-card">
+        <h2>Un peu d'histoire...</h2>
+        <hr>
+        <p>{{selectedDestination.destinationDescription}}</p>
+      </div>
+      <div class="interested-point-card">
+        <h2>Points d'intérêts</h2>
+        <div class= "hr-interested-point">
+          <hr>
+        </div>
+        <p>{{selectedDestination.destinationAnecdote}}</p>
+      </div>
+    </div>
+    <div class="cardContainer">
+      <div class="card">
+        <h3 class="balade">Balade 1</h3>
+        <div class="hr-ride">
+          <hr>
+        </div>
+        <p>{{selectedDestination.ride1}}</p>
+      </div>
+      <div class="card">
+        <img src="{{selectedDestination.ride1Picture}}" alt="">
+      </div>
+    </div>
+    <div class="cardContainer">
+      <div class="card">
+        <img src="{{selectedDestination.ride2Picture}}" alt="">
+      </div>
+      <div class="card">
+        <h3 class="balade">Balade 2</h3>
+        <div class="hr-ride">
+          <hr>
+        </div>
+        <p>{{selectedDestination.ride2}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECEIPE 1 -->
+<section id="foodPict" [ngStyle]="{'background-image': 'url(' + selectedDestination.receipe1[1].picture + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
+  <div class="container">
+  </div>
+</section>
+<section class="normal-scroll">
+  <div class="container">
+    <div class="speciality-title">
+      <h1>Spécialité locale : {{selectedDestination.receipe1[0].name}}</h1>
+    </div>
+    <h4>Temps de préparation: {{selectedDestination.receipe1[2].preparationTime}}</h4>
+    <div class="cardContainer">
+      <div class="card-ingredients">
+        <h3>Ingrédients</h3>
+        <div class="hr-ingredients">
+          <hr class="{{selectedDestination.theme}}">
+        </div>
+        <div *ngFor="let ingredient of selectedDestination.receipe1[3].receipe1Ingredients">
+          <div class="ingredientLign">
+            <img class="ingredients" src="https://www.svgrepo.com/show/171219/bowl.svg" alt="">
+            <p>{{ingredient.ingredient}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-instructions">
+        <h3>Instructions</h3>
+        <div class="hr-instructions">
+          <hr>
+        </div>
+        <div *ngFor="let step of selectedDestination.receipe1[4].receipe1Steps">
+          <div class="stepLign">
+            <div class="stepNum">
+              {{step.step}}
+            </div>
+            <div class="step">
+              {{step.instruction}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECEIPE 2 -->
+<section id="foodPict2" [ngStyle]="{'background-image': 'url(' + selectedDestination.receipe2[1].picture + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
+  <div class="container">
+  </div>
+</section>
+
+<section class="normal-scroll">
+  <div class="container">
+    <div class="speciality-title">
+      <h1>Spécialité locale : {{selectedDestination.receipe2[0].name}}</h1>
+    </div>
+    <h4>Temps de préparation: {{selectedDestination.receipe2[2].preparationTime}}</h4>
+    <div class="cardContainer">
+      <div class="card-ingredients">
+        <h3>Ingrédients</h3>
+        <div class="hr-ingredients">
+          <hr>
+        </div>
+        <div *ngFor="let ingredient of selectedDestination.receipe2[3].receipe2Ingredients">
+          <div class="ingredientLign">
+            <img class="ingredients" src="https://www.svgrepo.com/show/171219/bowl.svg" alt="">
+            <p>{{ingredient.ingredient}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-instructions">
+        <h3>Instructions</h3>
+        <div class="hr-instructions">
+          <hr>
+        </div>
+        <div *ngFor="let step of selectedDestination.receipe2[4].receipe2Steps">
+          <div class="stepLign">
+            <div class="stepNum">
+              {{step.step}}
+            </div>
+            <div class="step">
+              {{step.instruction}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHILL -->
+<section id="chillPict" [ngStyle]="{'background-image': 'url(' + selectedDestination.chillPlacePicture + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
+  <div class="container">
+  </div>
+</section>
+
+<section class="normal-scroll">
+  <div class="container">
+    <h1>Notre coup de coeur</h1>
+    <p class="chill">
+      {{selectedDestination.chillPlace}}
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<section class="normal-scroll {{selectedDestination.theme}}" id="goodbye">
+  <div class="container {{selectedDestination.theme}}">
+    <h1 class="{{selectedDestination.theme}}">
+      Voyagez de votre canapé avec Sofa'r
+    </h1>
+  </div>
+</section>
+
+<section id="footerPict" [ngStyle]="{'background-image': 'url(' + selectedDestination.destinationPicture3 + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
+  <div class="container {{selectedDestination.theme}}">
+  </div>
+</section>

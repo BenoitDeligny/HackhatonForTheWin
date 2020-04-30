@@ -8,7 +8,11 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { PimpMyCouchComponent } from './pages/pimp-my-couch/pimp-my-couch.component';
 import { PreferencesComponent } from './pages/preferences/preferences.component';
 import { JourneyComponent } from './pages/journey/journey.component';
+<<<<<<< HEAD
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+=======
+import { HttpClientModule } from '@angular/common/http';
+>>>>>>> feat/journeyCSS
 
 @NgModule({
   declarations: [
@@ -21,8 +25,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
     BrowserAnimationsModule,
     DragDropModule
+=======
+    HttpClientModule,
+>>>>>>> feat/journeyCSS
   ],
   providers: [],
   bootstrap: [AppComponent],
