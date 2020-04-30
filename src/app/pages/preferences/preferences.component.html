@@ -55,7 +55,7 @@
 </section>
 
 <!-- RECEIPE 1 -->
-<section class="normal-scroll">
+<!-- <section class="normal-scroll">
   <div class="container">
     <div class="speciality-title">
     </div>
@@ -73,20 +73,20 @@
         <div class="hr-ingredients">
           <hr class="{{randomResult[0]}}">
         </div>
-        <div *ngFor="let ingredient of berlin.receipe1[3].receipe1Ingredients">
+        <div *ngFor="let step of berlin.receipe1[3].receipe1Ingredients">
           <div class="stepLign">
             <div class="stepNum">
-              {{ingredient.step}}
+              {{step.step}}
             </div>
             <div class="step">
-              {{ingredient.instruction}}
+              {{step.instruction}}
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- RECEIPE 2 -->
 <section id="foodPict2" [ngStyle]="{'background-image': 'url(' + randomResult[26] + ')', 'background-attachment': 'fixed', 'z-index': '-3'}">
