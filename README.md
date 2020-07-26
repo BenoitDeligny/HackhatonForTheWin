@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
 
+With a team of 4 folks, we had 24 hours to create an app on the theme of "travel from your couch" (Covid-style). We took a lot of pleasure to create it and we almost won...
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
